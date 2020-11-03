@@ -1,0 +1,39 @@
+{% extends 'question.html' %}
+{% block content %}
+<header>
+    <h1 class="title">キマズイン</h1>
+    <div class="hum_menu">
+        <a href="javascript:void(0);">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <ul>
+        <li><a href="#sec1" id="menu-sec1">top</a></li>
+        <li><a href="#sec2" id="menu-sec2">キマズインとは</a></li>
+        <li><a href="#sec3" id="menu-sec3">お問い合わせ</a></li>
+        <li><a href="#sec4" id="menu-sec4">よくある質問</a></li>
+        <li><a href="#sec5" id="menu-sec5">履歴</a></li>
+        <li><a href="#sec6" id="menu-sec6">問いかけ機能の追加・削除</a></li>
+    </ul>
+</header>
+
+<div class="question">
+    <h1>エレベーター</h1>
+    <a href="#"><img src="/Users/sasakiwataru/Desktop/workspace/syakyou/img/thumb_01.png"></a>
+    <p>今日の昼ごはん何食べましたか？</p>
+</div>
+
+<div class="answer">
+    <p>今日食べたものについて話そう！</p>
+    <p>相手に何食べたか聞いてみよう！</p>
+</div>
+
+<footer>
+    <p>どうでしたか？</p>
+    <input type="submit" name="save" value="topへ">
+    <input type="submit" name="save" value="次の質問">
+    <input type="submit" name="save" value="評価">
+</footer>
+{% endblock %}
