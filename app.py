@@ -16,6 +16,10 @@ def helloWorld():
 def template():
     return render_template("top.html")
 
+@app.route("/star")
+def achievement():
+    return render_template("star.html")
+
 @app.errorhandler(404)
 def notfound(code):
     return "404ページだよ。ごめんね"
