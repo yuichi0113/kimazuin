@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="memo">
+    <label for="comment">コメント</label>
+    <textarea id="comment" name="comment" placeholder="ここには自由にコメントを記入してください"></textarea>
+</div>
+
+<!-- 評価クラス -->
+<div class="star">
+    <form type="get" action="#">
+        <div class="evaluation">
+            <input id="star1" type="radio" name="star" value="5" />
+            <label for="star1"><span class="text">最高</span>★</label>
+            <input id="star2" type="radio" name="star" value="4" />
+            <label for="star2"><span class="text">良い</span>★</label>
+            <input id="star3" type="radio" name="star" value="3" />
+            <label for="star3"><span class="text">普通</span>★</label>
+            <input id="star4" type="radio" name="star" value="2" />
+            <label for="star4"><span class="text">悪い</span>★</label>
+            <input id="star5" type="radio" name="star" value="1" />
+            <label for="star5"><span class="text">最悪</span>★</label>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
