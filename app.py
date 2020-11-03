@@ -16,6 +16,9 @@ def helloWorld():
 def template():
     return render_template("top.html")
 
+@app.errorhandler(404)
+def notfound(code):
+    return "404ページだよ。ごめんね"
 
 if __name__ == "__main__":
     # Flaskが持っている開発用サーバーを実行します。
