@@ -9,11 +9,32 @@ header {
     background-color: darkgrey;
 }
 
-.title {
+
+/* topページのcss */
+body.topbody {
+    background-color: rgb(255, 217, 0);
+}
+
+.toptitle {
     text-align: center;
 }
 
-/* starクラスのCSS */
+.topimg {
+	margin: 20px;
+	display: -webkit-flex;
+    display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+
+.topimg-icon p {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+}
+
+
+/* starページのCSS */
 .evaluation {
     display: flex;
     flex-direction: row-reverse;
