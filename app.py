@@ -16,6 +16,10 @@ def helloWorld():
 def template():
     return render_template("top.html")
 
+@app.route("/question")
+def question():
+    return render_template("question.html")
+
 @app.route("/star")
 def achievement():
     return render_template("star.html")
