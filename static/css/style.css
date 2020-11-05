@@ -10,16 +10,17 @@ body {
     background-color: #ffd000;
 }
 
-header {
+header.top {
     margin: 10px 0px;
     text-align: center;
+    color: #3f3f3f;
 }
 
-header h1 {
+header.top h1 {
     font-size: 36px;
 }
 
-header h3 {
+header.top h3 {
     font-size: 20px;
 }
 
@@ -28,6 +29,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 
 button.imgbtn {
     margin: 15px;
@@ -60,10 +62,11 @@ button.rulebtn {
     border-radius: 10px;
     border: none;
     background-color: #3f3f3f;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.25em;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    box-shadow: 0 3px 6px rgba(134, 114, 1, 0.25);
     color: #ffd000;
 }
 
