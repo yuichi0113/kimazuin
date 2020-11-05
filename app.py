@@ -8,6 +8,21 @@ app = Flask(__name__)
 # 秘密鍵
 app.secret_key = "kimazuin"
 
+@app.route("/dbtest")
+def dbtest():
+    # flask.dbに接続
+    conn = sqlite3.connect("flask.db")
+    # 中身が見られるようにする
+    c = conn.cursor()
+    # SQL文の実行
+    c.execute("select * from places")
+    # 取ってきたレコードを格納 fetch=取ってくるという意味の英単語
+    places = c.fetchone()
+    # データベース接続終了
+    c.close()
+    
+    return render_template("dbtest.html", places=places)
+
 @app.route("/")
 def helloWorld():
     return "HelloWorld."
