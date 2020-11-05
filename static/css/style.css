@@ -7,7 +7,7 @@
 
 /* topページのcss */
 body {
-    background-color:#ffd000;
+    background-color: #ffd000;
 }
 
 header {
@@ -23,26 +23,27 @@ header h3 {
     font-size: 20px;
 }
 
-.container,footer {
-   display: flex;
-   justify-content: space-between;
+.container,
+footer {
+    display: flex;
+    justify-content: space-between;
 }
 
-button.imgbtn {   
+button.imgbtn {
     margin: 15px;
     padding: 15px;
     border-radius: 10px;
     border: none;
     background-color: #ffffff;
     box-shadow: 0 3px 6px rgba(173, 45, 45, 0.25);
-    outline:none;
+    outline: none;
     cursor: pointer;
 }
 
 button:active {
-    box-shadow:none;
-    position:relative;
-    top:5px;
+    box-shadow: none;
+    position: relative;
+    top: 5px;
 }
 
 button.imgbtn p {
