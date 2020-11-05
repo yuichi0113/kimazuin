@@ -6,7 +6,7 @@
 
 
 /* topページのcss */
-body {
+body.top {
     background-color: #ffd000;
 }
 
@@ -24,8 +24,7 @@ header.top h3 {
     font-size: 20px;
 }
 
-.container,
-footer {
+.container,footer {
     display: flex;
     justify-content: space-between;
 }
@@ -87,6 +86,11 @@ button.rulebtn {
 } */
 
 
+
+/* questionページのcss */
+body.qusetion {
+    background-color: #375181;
+}
 
 
 
