@@ -1,37 +1,94 @@
 * {
     padding: 0;
     margin: 0;
-}
-
-header {
     width: 100%;
-    height: 100px;
-    background-color: darkgrey;
 }
 
 
 /* topページのcss */
-body.topbody {
-    background-color: rgb(255, 217, 0);
+body {
+    background-color: #ffd000;
 }
 
-.toptitle {
+header.top {
+    margin: 10px 0px;
     text-align: center;
+    color: #3f3f3f;
 }
 
-.topimg {
-	margin: 20px;
-	display: -webkit-flex;
+header.top h1 {
+    font-size: 36px;
+}
+
+header.top h3 {
+    font-size: 20px;
+}
+
+.container,
+footer {
     display: flex;
-	-webkit-justify-content: space-between;
-	justify-content: space-between;
+    justify-content: space-between;
 }
 
-.topimg-icon p {
-    position: absolute;
-    top: 44%;
-    width: 100%;
+
+button.imgbtn {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffff;
+    box-shadow: 0 3px 6px rgba(173, 45, 45, 0.25);
+    outline: none;
+    cursor: pointer;
 }
+
+button:active {
+    box-shadow: none;
+    position: relative;
+    top: 5px;
+}
+
+button.imgbtn p {
+    margin-top: 3px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+
+button.rulebtn {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #3f3f3f;
+    letter-spacing: 0.25em;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(134, 114, 1, 0.25);
+    color: #ffd000;
+}
+
+/* divタグで書く時の場合
+.topimg {
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #fff;
+    border-bottom: solid 6px #474747;
+    box-shadow: 0 3px 6px rgba(173, 45, 45, 0.25);
+}
+
+.topimg p {
+    text-align: center;
+    font-weight: bold;
+    color: #474747;
+} */
+
+
+
+
 
 
 /* starページのCSS */
