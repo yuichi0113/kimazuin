@@ -18,13 +18,32 @@ def dbtest():
     c = conn.cursor()
     # SQL文の実行
     c.execute("select * from places")
+    c.execute("select * from places")
     # 取ってきたレコードを格納 fetch=取ってくるという意味の英単語
-    places = c.fetchone()
-    print()
+
     # データベース接続終了
     c.close()
 
     return render_template("dbtest.html", places=places)
+
+
+
+@app.route("/dbtest2")
+def dbtest2():
+    # flasktest.dbに接続します
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    content_li = "SELECT content,advice FROM questions where place_id=1;"
+    # sql文を実行
+    c.execute(content_li)
+    # 取ってきた内容を変数に格納する
+    content_li = c.fetchall()
+    # データベースの接続終了
+    c.close
+    
+    content=random.choice(content_li)
+
+    return render_template("dbtest2.html", content=content[0], advice=content[1])
 
 
 @app.route("/")
