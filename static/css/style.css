@@ -132,6 +132,7 @@ header.top h3 {
     width: 100%;
     text-align: left;
   }
+
   .says {
     display: inline-block;
     position: relative; 
@@ -153,6 +154,7 @@ header.top h3 {
     -webkit-transform: rotate(35deg);
     transform: rotate(35deg);
   }
+
   .says p {
     margin: 0;
     padding: 0;
@@ -162,6 +164,7 @@ header.top h3 {
   .mballoon2 {
     margin: 10px 0;
   }
+
   .mballoon2 p {
     display: inline-block;
     position: relative; 
@@ -169,7 +172,7 @@ header.top h3 {
     padding: 8px;
     max-width: 250px;
     border-radius: 12px;
-    background: #30e852;
+    background: #fff;
     font-size: 15px:
   }
   
@@ -179,7 +182,7 @@ header.top h3 {
     top: 3px; 
     right: -19px;
     border: 8px solid transparent;
-    border-left: 18px solid #30e852;
+    border-left: 18px solid #fff;
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
   }
