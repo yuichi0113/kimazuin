@@ -37,7 +37,7 @@ def dbtest2():
     # 取ってきた内容を変数に格納する
     content_li = c.fetchall()
     # データベースの接続終了
-    c.close()
+    c.close
     
     content=random.choice(content_li)
 
