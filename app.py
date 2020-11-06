@@ -1,12 +1,14 @@
 # Flaskからimportしてflaskを使えるようにする。
 from flask import Flask, render_template
 import sqlite3
+import random
 
 # appっていう名前でFlaskアプリを作っていくよーみたいな
 app = Flask(__name__)
 
 # 秘密鍵
 app.secret_key = "kimazuin"
+
 
 @app.route("/dbtest")
 def dbtest():
@@ -18,7 +20,7 @@ def dbtest():
     c.execute("select * from places")
     c.execute("select * from places")
     # 取ってきたレコードを格納 fetch=取ってくるという意味の英単語
-    places = c.fetchone()
+    places = c.fetchall()
     # データベース接続終了
     c.close()
     
@@ -29,18 +31,17 @@ def dbtest2():
     # flasktest.dbに接続します
     conn = sqlite3.connect("flask.db")
     c = conn.cursor()
-    ques = "SELECT id, content, advice FROM questions;"
+    content_li = "SELECT content,advice FROM questions where place_id=1;"
     # sql文を実行
-    c.execute(ques)
-    print("OK")
+    c.execute(content_li)
     # 取ってきた内容を変数に格納する
-    ques = c.fetchone()
+    content_li = c.fetchall()
     # データベースの接続終了
     c.close()
+    
+    content=random.choice(content_li)
 
-    ques = ques[1]
-    print(ques)
-    return render_template("dbtest2.html", ques=ques)
+    return render_template("dbtest2.html", content=content[0], advice=content[1])
 
 @app.route("/")
 def helloWorld():
