@@ -24,23 +24,6 @@ def dbtest():
     
     return render_template("dbtest.html", places=places)
 
-@app.route("/dbtest2")
-def dbtest2():
-    # flasktest.dbに接続します
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    ques = "SELECT id, content, advice FROM questions;"
-    # sql文を実行
-    c.execute(ques)
-    print("OK")
-    # 取ってきた内容を変数に格納する
-    ques = c.fetchone()
-    # データベースの接続終了
-    c.close()
-
-    ques = ques[1]
-    print(ques)
-    return render_template("dbtest2.html", ques=ques)
 
 @app.route("/")
 def helloWorld():

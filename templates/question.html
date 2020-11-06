@@ -1,7 +1,9 @@
 {% extends 'index.html' %}
 {% block content %}
 
-<body class="qusetion">
+
+
+<body class="qubody">
 
 
     <!-- <header>
@@ -23,11 +25,64 @@
     </ul>
 </header> -->
 
-    <div class="question">
-        <h1>エレベーター</h1>
-        <a href="#"><img src="/Users/sasakiwataru/Desktop/workspace/syakyou/img/thumb_01.png"></a>
-        <p>今日の夜ごはん何食べましたか？</p>
+
+<header class="quheader">
+    <h1>エレベーター</h1>
+</header>
+
+
+<div class="line-bc"><!--会話全体を囲う-->
+
+    <!--左コメント始-->
+    <div class="balloon1">
+      <div class="faceicon">
+        <img src="../static/css/images/ans-icon.png" alt="">
+      </div>
+      <div class="chatting">
+        <div class="says">
+          <p>問いかけ内容が入る。問いかけ内容が入る。問いかけ内容が入る。問いかけ内容が入る。</p>
+        </div>
+      </div>
     </div>
+    <!--/左コメント終-->
+  
+    <!--右コメント始-->
+    <div class="balloon2">
+      <p>
+      右ふきだし文
+      </p>
+    </div>
+    <!--/③右コメント終-->
+    
+  </div><!--/①LINE会話終了-->
+
+        
+<!-- <div class="question">
+    <img src="../static/css/images/hukidasi.png">   
+    <p>言葉を使わず動作(ジェスチャー）をしてください。言葉を使わず動作(ジェスチャー）をしてください。</p>
+</div>
+
+
+<div class="answer">
+    <p>（ゴルフのスイング、野球のスイング）（ゴルフのスイング、野球のスイング）（ゴルフのスイング、野球のスイング）（ゴルフのスイング、野球のスイング）（ゴルフのスイング、野球のスイング）
+    </p>
+</div> -->
+
+
+<footer class="qufooter">
+    <button type="button" class="imgbtn" onclick="location.href='/top'">
+        <p>TOP</p>
+    </button>
+    <button type="button" class="imgbtn" onclick="location.href='/question'">
+        <p>NEXT</p>
+    </button>
+    <button type="button" class="imgbtn" onclick="location.href='/star'">
+        <p>評価</p>
+    </button>
+</footer>
+
+
+</body>
 
     <div class="answer">
         <p>今日食べたものについて話そう！</p>
