@@ -8,8 +8,6 @@ app = Flask(__name__)
 # 秘密鍵
 app.secret_key = "kimazuin"
 
-<<<<<<< HEAD
-=======
 @app.route("/dbtest")
 def dbtest():
     # flask.dbに接続
@@ -24,7 +22,6 @@ def dbtest():
     c.close()
     
     return render_template("dbtest.html", places=places)
->>>>>>> d2ca1d0373683e6d5382e267b87599dbffbda951
 
 @app.route("/")
 def helloWorld():
