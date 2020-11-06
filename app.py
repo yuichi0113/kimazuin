@@ -26,6 +26,7 @@ def dbtest():
     
     return render_template("dbtest.html", places=places)
 
+
 @app.route("/dbtest2")
 def dbtest2():
     # flasktest.dbに接続します
