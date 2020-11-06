@@ -8,8 +8,6 @@ app = Flask(__name__)
 # 秘密鍵
 app.secret_key = "kimazuin"
 
-<<<<<<< HEAD
-=======
 @app.route("/dbtest")
 def dbtest():
     # flask.dbに接続
@@ -18,13 +16,31 @@ def dbtest():
     c = conn.cursor()
     # SQL文の実行
     c.execute("select * from places")
+    c.execute("select * from places")
     # 取ってきたレコードを格納 fetch=取ってくるという意味の英単語
     places = c.fetchone()
     # データベース接続終了
     c.close()
     
     return render_template("dbtest.html", places=places)
->>>>>>> d2ca1d0373683e6d5382e267b87599dbffbda951
+
+@app.route("/dbtest2")
+def dbtest2():
+    # flasktest.dbに接続します
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    ques = "SELECT id, content, advice FROM questions;"
+    # sql文を実行
+    c.execute(ques)
+    print("OK")
+    # 取ってきた内容を変数に格納する
+    ques = c.fetchone()
+    # データベースの接続終了
+    c.close()
+
+    ques = ques[1]
+    print(ques)
+    return render_template("dbtest2.html", ques=ques)
 
 @app.route("/")
 def helloWorld():
