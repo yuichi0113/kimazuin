@@ -20,11 +20,12 @@ def dbtest():
     c.execute("select * from places")
     c.execute("select * from places")
     # 取ってきたレコードを格納 fetch=取ってくるという意味の英単語
-    places = c.fetchall()
+
     # データベース接続終了
     c.close()
-    
+
     return render_template("dbtest.html", places=places)
+
 
 
 @app.route("/dbtest2")
@@ -44,6 +45,7 @@ def dbtest2():
 
     return render_template("dbtest2.html", content=content[0], advice=content[1])
 
+
 @app.route("/")
 def helloWorld():
     return "HelloWorld."
@@ -56,7 +58,30 @@ def template():
 
 @app.route("/question")
 def question():
-    return render_template("question.html")
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 1"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    places = "SELECT place FROM places WHERE id = 1"
+    c.execute(places)
+    places = c.fetchall()
+    place = places[0]
+    place = random.choice(places)
+    c.close()
+    # c.execute(places)
+    # place = c.fetchone()
+    # places = random.choice(place)
+    # c.close()
+    return render_template("question.html", content=content, place=place)
 
 
 @app.route("/star")
@@ -72,3 +97,5 @@ def notfound(code):
 if __name__ == "__main__":
     # Flaskが持っている開発用サーバーを実行します。
     app.run(debug=True)
+
+# join places on questions.place_id = places.id
