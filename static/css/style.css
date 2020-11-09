@@ -24,7 +24,8 @@ header.top h3 {
     font-size: 20px;
 }
 
-.topcontainer,footer {
+.topcontainer,
+footer {
     display: flex;
     justify-content: space-between;
 }
@@ -94,7 +95,7 @@ header.top h3 {
 .quheader {
     margin: 10px 0px;
     text-align: center;
-} 
+}
 
 .quheader h1 {
     font-size: 36px;
@@ -109,7 +110,7 @@ header.top h3 {
     text-align: right;
     font-size: 14px;
 }
-  
+
 /*以下、左側のコメント*/
 .balloon1 {
     width: 100%;
@@ -117,76 +118,77 @@ header.top h3 {
     overflow: hidden;
 }
 
-  .balloon1 .faceicon {
+.balloon1 .faceicon {
     float: left;
     margin-right: -50px;
     width: 40px;
-  }
-  
-  .balloon1 .faceicon img{
+}
+
+.balloon1 .faceicon img {
     width: 100%;
     height: auto;
     border-radius: 50%;
-  }
-  .balloon1 .chatting {
+}
+
+.balloon1 .chatting {
     width: 100%;
     text-align: left;
-  }
+}
 
-  .says {
+.says {
     display: inline-block;
-    position: relative; 
+    position: relative;
     margin: 0 0 0 50px;
     padding: 10px;
     max-width: 250px;
     border-radius: 12px;
     background: #edf1ee;
-  }
-  
-  .says:after {
+}
+
+.says:after {
     content: "";
     display: inline-block;
     position: absolute;
-    top: 3px; 
+    top: 3px;
     left: -19px;
     border: 8px solid transparent;
     border-right: 18px solid #edf1ee;
     -webkit-transform: rotate(35deg);
     transform: rotate(35deg);
-  }
+}
 
-  .says p {
+.says p {
     margin: 0;
     padding: 0;
-  }
-  
-  /*以下、③右側の緑コメント*/
-  .mballoon2 {
-    margin: 10px 0;
-  }
+}
 
-  .mballoon2 p {
+/*以下、③右側の緑コメント*/
+.mballoon2 {
+    margin: 10px 0;
+}
+
+.mballoon2 p {
     display: inline-block;
-    position: relative; 
+    position: relative;
     margin: 0 10px 0 0;
     padding: 8px;
     max-width: 250px;
     border-radius: 12px;
     background: #fff;
-    font-size: 15px:
-  }
-  
-  .mballoon2 p:after {
+    font-size: 15px;
+}
+
+.mballoon2 p:after {
     content: "";
     position: absolute;
-    top: 3px; 
+    top: 3px;
     right: -19px;
     border: 8px solid transparent;
     border-left: 18px solid #fff;
     -webkit-transform: rotate(-35deg);
     transform: rotate(-35deg);
-  }
-  
+}
+
 
 
 /* .question {
@@ -241,15 +243,15 @@ header.top h3 {
     border: solid 2px #67c5ff;
     border-radius: 3px;
     transition: .3s;
-  }
-  
-  .btn-flat-border:hover {
+}
+
+.btn-flat-border:hover {
     background: #67c5ff;
     color: white;
-  }
+}
 
 
-  
+
 
 /* starページのCSS */
 .evaluation {
