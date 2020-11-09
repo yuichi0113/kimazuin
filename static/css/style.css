@@ -10,7 +10,7 @@
     font-size: 48px;
 }
 .sp32pc70 {
-    font-size: 70px
+    font-size: 70px;
 }
 
 /* タブレット以下のフォント */
@@ -164,6 +164,7 @@
 	align-items: center;
     overflow: hidden;    
 }
+
 @media (max-width:959px) {
 	.bln {
 		padding: 2%;
@@ -178,6 +179,7 @@
     background: no-repeat left center / contain; 
     /* display: inline-block; */
 }
+
 @media (max-width:959px) {
 	.bln:before {
 		width: 100px;
@@ -205,6 +207,7 @@
     border: solid 4px #171717;
     border-radius: 10px;
 }
+
 @media (max-width:959px) {
 	.says {
 		margin: 1rem;;
@@ -266,7 +269,6 @@
 
 .qu-footer {
     display: flex;
-    justify-content: space-between;
     justify-content: center;
     width: 100%;
 }
