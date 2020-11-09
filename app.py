@@ -55,7 +55,7 @@ def template():
     return render_template("top.html")
 
 
-@app.route("/question")
+@app.route("/question1")
 def question():
     conn = sqlite3.connect("flask.db")
     c = conn.cursor()
@@ -68,7 +68,7 @@ def question():
     advice = random.choice(contents)
     c.close()
 
-    return render_template("question.html", content=content, place=advice)
+    return render_template("question1.html", content=content, place=advice)
 
 
 @app.route("/star", methods=["GET"])
@@ -85,7 +85,7 @@ def achievement_post():
     c.execute("insert into questions values(star,comment)", (star, comment))
     conn.commit()
     conn.close()
-    return redirect("/date")
+    return redirect("/")
 
 
 @app.route("/date")
