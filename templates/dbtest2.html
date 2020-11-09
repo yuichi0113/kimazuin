@@ -1,5 +1,10 @@
 {% extends 'index.html' %}
 {% block content %}
+<form>
+    <input type="button" value="サイコロ" onClick="altRan2()">
+    <span id="sai">-</span>
+
+</form>
 <p>{{ content }}</p>
 <p>{{ advice }}</p>
 {% endblock %}

@@ -6,24 +6,28 @@
 .sp16pc36 {
     font-size: 36px;
 }
+
 .sp24pc48 {
     font-size: 48px;
 }
+
 .sp32pc70 {
     font-size: 70px
 }
 
 /* タブレット以下のフォント */
-@media screen and (max-width: 959px){
+@media screen and (max-width: 959px) {
     .sp16pc36 {
         font-size: 16px;
     }
+
     .sp24pc48 {
         font-size: 24px;
     }
+
     .sp32pc70 {
         font-size: 32px;
-}
+    }
 }
 
 
@@ -52,19 +56,19 @@
     padding: 2%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 29%;    
+    width: 29%;
     border-radius: 10px;
     background-color: #fafafa;
 }
 
 .contents-box img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
 /* タブレット以下の表示 */
-@media screen and (max-width: 959px){
-	.contents-box {
+@media screen and (max-width: 959px) {
+    .contents-box {
         margin: 3%;
         padding: 2%;
         -webkit-box-sizing: border-box;
@@ -81,7 +85,7 @@
 
 .btn-rule {
     margin: 3%;
-    padding: 2%;    
+    padding: 2%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 88%;
@@ -105,13 +109,15 @@
     margin: 10px 0px;
     text-align: center;
     color: #fafafa;
-} 
-.qu-header h1 {    
+}
+
+.qu-header h1 {
     position: relative;
     display: inline-block;
     margin-bottom: 1em;
 }
-.qu-header h1:before {  
+
+.qu-header h1:before {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -122,7 +128,7 @@
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background-color: #171717;
-    border-radius: 10px;      
+    border-radius: 10px;
 }
 
 .advice {
@@ -132,7 +138,7 @@
     position: relative;
     background-color: #fafafa;
     border: solid 4px #fcd228;
-    border-radius: 0px 10px 10px 10px;   
+    border-radius: 0px 10px 10px 10px;
     font-weight: bold;
 }
 
@@ -146,11 +152,12 @@
     line-height: 40px;
     background: #fcd228;
     color: #171717;
-    border-radius: 5px 5px 0 0;    
-    background: contain; 
+    border-radius: 5px 5px 0 0;
+    background: contain;
 }
+
 .advice p {
-    margin: 1%; 
+    margin: 1%;
     padding: 0;
 }
 
@@ -161,13 +168,14 @@
     padding: 3%;
     box-sizing: border-box;
     display: flex;
-	align-items: center;
-    overflow: hidden;    
+    align-items: center;
+    overflow: hidden;
 }
+
 @media (max-width:959px) {
-	.bln {
-		padding: 2%;
-	}
+    .bln {
+        padding: 2%;
+    }
 }
 
 /* 左右アイコンのイメージサイズと配置 */
@@ -175,24 +183,25 @@
     content: "";
     width: 150px;
     height: 150px;
-    background: no-repeat left center / contain; 
+    background: no-repeat left center / contain;
     /* display: inline-block; */
 }
+
 @media (max-width:959px) {
-	.bln:before {
-		width: 100px;
-		height: 100px;
-	}
+    .bln:before {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /* 左アイコンのイメージ配置 */
 .bln.boss:before {
-    background-image: url(../css/images/question.png) 
+    background-image: url(../css/images/question.png)
 }
 
 /* 右アイコンのイメージ配置 */
 .bln.you:before {
-    background-image: url(../css/images/answer.png) 
+    background-image: url(../css/images/answer.png)
 }
 
 /* 吹き出し中の文章アウトライン */
@@ -201,15 +210,17 @@
     margin: 1rem;
     max-width: calc(100% - 150px);
     padding: .6rem 1.2rem;
-    background-color: #fafafa;    
+    background-color: #fafafa;
     border: solid 4px #171717;
     border-radius: 10px;
 }
+
 @media (max-width:959px) {
-	.says {
-		margin: 1rem;;
-		max-width: calc(100% - 180px);
-	}
+    .says {
+        margin: 1rem;
+        ;
+        max-width: calc(100% - 180px);
+    }
 }
 
 /* 吹き出し口 */
@@ -220,9 +231,10 @@
     left: -16px;
     margin-top: -8px;
     border: 8px solid transparent;
-    border-right: 10px solid  #fafafa;
+    border-right: 10px solid #fafafa;
     z-index: 2;
 }
+
 .says::after {
     content: "";
     position: absolute;
@@ -237,30 +249,32 @@
 /* 右のアイコン配置指定 吹き出し反転など */
 .bln.fxd--rr .says:before,
 .bln.fxd--rr .says:after {
-	transform: scale(-1, 1);	
+    transform: scale(-1, 1);
 }
 
 /* 右のアイコンから 吹き出し反転 */
 .bln.fxd--rr .says:before {
-	left: inherit;
-	right: -16px;
+    left: inherit;
+    right: -16px;
 }
+
 .bln.fxd--rr .says:after {
-	left: inherit;
-    right: -21px;	
+    left: inherit;
+    right: -21px;
 }
 
 /*吹き出内の調整用*/
 .says p {
-  margin: 0;
-  padding: 0; 
-  font-weight: bold;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }
 
 /* 右の人にする時につける flex要素 */
 .fxd--rr {
-	flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
+
 /*吹き出し(バルーン)のアウトライン終わり*/
 
 
@@ -273,7 +287,7 @@
 
 .button {
     margin: 3%;
-    padding: 2%; 
+    padding: 2%;
 }
 
 .qu-btn {
@@ -286,14 +300,14 @@
     transition: .4s;
     font-weight: bold;
     border: solid 4px #171717;
-  }
+}
 
-  .qu-btn:hover {
-  background: #fafafa;
-  color:#171717;
-  }
+.qu-btn:hover {
+    background: #fafafa;
+    color: #171717;
+}
 
-  
+
 /* -----starページのCSS----- */
 /* -----starページのCSS----- */
 .evaluation {
