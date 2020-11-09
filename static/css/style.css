@@ -39,6 +39,7 @@
     color: #171717;
 }
 
+
 .contents-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -149,6 +150,7 @@
     border-radius: 5px 5px 0 0;    
     background: contain; 
 }
+
 .advice p {
     margin: 1%; 
     padding: 0;
@@ -280,20 +282,18 @@
     display: inline-block;
     padding: 0.3em 1em;
     text-decoration: none;
-    color: #171717;
-    background-color: #fcd228;
-    border-radius: 7px;
-    transition: .4s;
-    font-weight: bold;
-    border: solid 4px #171717;
-  }
+    background-color: #fff;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .3s;
+}
 
   .qu-btn:hover {
   background: #fafafa;
   color:#171717;
   }
 
-  
 /* -----starページのCSS----- */
 /* -----starページのCSS----- */
 .evaluation {
