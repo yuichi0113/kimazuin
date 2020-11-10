@@ -1,10 +1,42 @@
 {% extends 'index.html' %}
 {% block content %}
+<header>
+    <img src="https://hajimete.org/wp-content/uploads/2019/06/title.png" alt="logo" />
+    <span>三</span>
+</header>
+<main>
+    <div id="top_contents">
+        <div class="top_inner">
+            <h1>我々は宇宙人だ。</h1>
+            <p>
+                世界征服には、どうしたってUFOは欠かせない代物である。<br />
+                我々のUFOを紹介しよう！
+            </p>
+        </div>
+    </div>
+</main>
+<div id="menu" class="suru">
+    <div class="menu_inner">
+        <h2>MENU</h2>
+        <ul>
+            <li>UFOについて</li>
+            <li>UFOとは？</li>
+            <li>謎の飛行物体「UFO」</li>
+            <li>UFOと未確認飛行物体</li>
+            <li>ユーフォメーション（UFO）</li>
+        </ul>
+    </div>
+</div>
+
+
+Resources
 <form>
     <input type="button" value="サイコロ" onClick="altRan2()">
     <span id="sai">-</span>
 
 </form>
+
 <p>{{ content }}</p>
 <p>{{ advice }}</p>
 {% endblock %}
+
