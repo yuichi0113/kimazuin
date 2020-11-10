@@ -82,24 +82,26 @@ def achievement_post():
     comment = request.form.get("comment")
     conn = sqlite3.connect('flasktest.db')
     c = conn.cursor()
-    c.execute("insert into questions values(star,comment)", (star, comment))
+    c.execute("insert into star values(null,?,?)", (star, comment))
     conn.commit()
     conn.close()
-    return redirect("/")
+    return render_template("top.html")
+    # return redirect("/top")
+    # return "送信完了"
 
 
-@app.route("/date")
-def date():
-    conn = sqlite3.connect('flasktest.db')
-    c = conn.cursor()
-    c.execute = "select content,advice,star,comment from questions where id = ?", (
-        id,)
-    date_list = []
-    for row in c.fetchall():
-        date_list.append(
-            {"content": row[0], "advice": row[1], "star": row[2], "comment": row[3]})
-    c.close()
-    return render_template('date.html', date_list=date_list)
+# @app.route("/date")
+# def date():
+#     conn = sqlite3.connect('flasktest.db')
+#     c = conn.cursor()
+#     c.execute = "select content,advice,star,comment from questions where id = ?", (
+#         id,)
+#     date_list = []
+#     for row in c.fetchall():
+#         date_list.append(
+#             {"content": row[0], "advice": row[1], "star": row[2], "comment": row[3]})
+#     c.close()
+#     return render_template('date.html', date_list=date_list)
 
 
 @app.errorhandler(404)

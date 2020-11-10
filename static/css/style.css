@@ -393,4 +393,3 @@
 .evaluation label:hover~label,
 .evaluation input[type='radio']:checked~label {
     color: #ffcc00;
-}
