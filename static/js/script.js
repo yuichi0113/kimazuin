@@ -1,10 +1,10 @@
 $(function () {
-    $("header span").on("click", function () {
-        if ($(this).text() == "三") {
+    $(".btn-rule span").on("click", function () {
+        if ($(this).text() == "キマズインとは！？") {
             $(this).text("×");
             $("#menu").removeClass("suru");
         } else {
-            $(this).text("三");
+            $(this).text("キマズインとは！？");
             $("#menu").addClass("suru");
         }
     });
