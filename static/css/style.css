@@ -38,7 +38,7 @@
 }
 
 .top-header {
-    margin: 10px 0px;
+    margin: 5% 0%;
     text-align: center;
     color: #171717;
 }
@@ -101,12 +101,32 @@
 
 /* -----questionページのcss----- */
 /* -----questionページのcss----- */
-.qu-body {
-    background-color: #438fbe;
+.qu1-body {
+    background-color: #2b74a1;
+}
+
+.qu2-body {
+    background-color: #5bb836;
+}
+
+.qu3-body {
+    background-color: #969696;
+}
+
+.qu4-body {
+    background-color: #e73d3d;
+}
+
+.qu5-body {
+    background-color: #6bc6d6;
+}
+
+.qu6-body {
+    background-color: #a368ca;
 }
 
 .qu-header {
-    margin: 10px 0px;
+    margin: 5% 0%;
     text-align: center;
     color: #fafafa;
 }
@@ -132,28 +152,21 @@
 }
 
 .advice {
-    margin: 15% 10% 10% 10%;
-    text-align: center;
+    margin: 15% 10%;
     color: #171717;
-    position: relative;
     background-color: #fafafa;
     border: solid 4px #fcd228;
-    border-radius: 0px 10px 10px 10px;
+    border-radius: 10px;
     font-weight: bold;
+    background: contain;
+    text-align: center;
 }
 
 .advice-title {
-    position: absolute;
-    display: inline-block;
-    top: -44px;
-    left: -4px;
-    padding: 0% 2%;
-    height: 43px;
-    line-height: 40px;
+    padding: 2%;
     background: #fcd228;
     color: #171717;
-    border-radius: 5px 5px 0 0;
-    background: contain;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .advice p {
@@ -196,7 +209,7 @@
 
 /* 左アイコンのイメージ配置 */
 .bln.boss:before {
-    background-image: url(../css/images/question.png)
+    background-image: url(../css/images/question1.png)
 }
 
 /* 右アイコンのイメージ配置 */
@@ -279,26 +292,27 @@
 
 
 .qu-footer {
-    display: flex;
-    justify-content: center;
     width: 100%;
 }
 
 .button {
-    margin: 3%;
-    padding: 2%;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
 }
 
 .qu-btn {
-    display: inline-block;
-    padding: 0.3em 1em;
+    display: inline-flex;
+    margin: 2%;
+    padding: 2%;
     text-decoration: none;
     color: #171717;
     background-color: #fcd228;
     border-radius: 7px;
     transition: .4s;
     font-weight: bold;
-    border: solid 4px #171717;
+    border: solid 4px #171717;   
+    align-items: center;
 }
 
 .qu-btn:hover {

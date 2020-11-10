@@ -1,0 +1,74 @@
+{% extends 'index.html' %}
+{% block content %}
+
+
+
+<body class="qu4-body">
+
+
+    <!-- <header>
+    <h1 class="title">キマズイン</h1>
+    <div class="hum_menu">
+        <a href="javascript:void(0);">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <ul>
+        <li><a href="#sec1" id="menu-sec1">top</a></li>
+        <li><a href="#sec2" id="menu-sec2">キマズインとは</a></li>
+        <li><a href="#sec3" id="menu-sec3">お問い合わせ</a></li>
+        <li><a href="#sec4" id="menu-sec4">よくある質問</a></li>
+        <li><a href="#sec5" id="menu-sec5">履歴</a></li>
+        <li><a href="#sec6" id="menu-sec6">問いかけ機能の追加・削除</a></li>
+    </ul>
+</header> -->
+
+
+
+<header class="qu-header">
+    <h1 class="sp32pc70">食堂</h1>
+</header>
+
+
+<!--左から吹き出し-->
+<div class="bln boss">
+  <div class="says">
+    <p class="sp24pc48">
+      {{content[0]}}
+    </p>
+  </div>
+</div>
+
+<!--アドバイス-->
+<div class="advice">
+  <div class="advice-title sp24pc48">どう答える？</div>
+  <p class="sp16pc36">下のアドバイスを参考に</p>
+  <p class="sp16pc36">自分から話しかけてみよう！</p>
+</div>
+  
+
+<!--右から吹き出し-->
+<div class="bln you fxd--rr">
+  <div class="says">
+    <p class="sp24pc48">
+      {{content[1]}}
+    </p>
+  </div>
+</div>
+
+
+
+<footer class="qu-footer">
+  <div class="button sp24pc48">
+    <a href="/top" class="qu-btn ">TOP</a>
+    <a href="/question1" class="qu-btn">NEXT</a>
+    <a href="/star" class="qu-btn">評価</a>
+  </div>
+</footer>
+
+
+</body>
+
+    {% endblock %}
