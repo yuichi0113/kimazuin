@@ -84,7 +84,7 @@
 }
 
 .btn-rule {
-    margin: 3%;
+    margin: 5% 3%;
     padding: 2%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -97,7 +97,28 @@
     background-color: #171717;
 }
 
-.btn-rule span {
+.btn-rule-close {
+    margin: 3%;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 88%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #171717;
+    border-radius: 10px;
+    background-color: #fcd228;
+}
+
+.btn-rule span { 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.btn-rule-close span {
+    transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     cursor: pointer;
 }
@@ -109,11 +130,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, .95);
-    display: block;
+    background:#171717;
+    overflow: hidden;
     color: #fff;
     transition: .6s ease-in-out;
-    -webkit-transition: .6s ease-in-out;
+    -webkit-transition: .6s ease-in-out;   
+    overflow-y: auto;
 }
 
 .menu_inner {
@@ -121,21 +143,29 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    display: block;
-    width: 280px;
-    padding-top: 60px;
-    text-align: center;
+    -webkit-transform: translate(-50%, -50%);  
+    overflow: hidden;
+    width: 80%;
+    padding-top: 2%;
+    text-align: center;    
+    overflow-y: auto;
 }
 
 .menu_inner h2 {
-    margin-bottom: 20px;
+    margin-bottom: 2%;
+}
+
+.menu_inner img {
+    margin-top: 2%;
+    width: 100%;
 }
 
 .suru {
     transform: translateY(-100%);
     -webkit-transform: translateY(-100%);
 }
+
+
 
 /* -----questionページのcss----- */
 /* -----questionページのcss----- */
@@ -362,19 +392,13 @@
 /* -----starページのCSS----- */
 /* -----starページのCSS----- */
 .star-body {
-    background-color: #fafafa;
+    background-color: #fcd228;
 }
 
 .evaluation {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-}
-
-.memo {
-    display: flex;
-    justify-content: center;
-    margin: 5%;
 }
 
 .evaluation input[type='radio'] {
@@ -384,7 +408,7 @@
 .evaluation label {
     position: relative;
     padding: 10px 10px 0;
-    color: gray;
+    color:#fafafa;
     cursor: pointer;
     font-size: 50px;
 }
@@ -396,12 +420,43 @@
     right: 0;
     text-align: center;
     font-size: 12px;
-    color: gray;
+    color: #fafafa;
 }
 
 .evaluation label:hover,
 .evaluation label:hover~label,
 .evaluation input[type='radio']:checked~label {
-    color: #ffcc00;
+    color: #171717;
 }
 
+.memo {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+textarea {
+    padding: 2%;
+    width: 50%;
+    height: 120px; 
+}
+
+.star-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.starbtn-rule {
+    margin: 5% 3%;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 88%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #fcd228;
+    border-radius: 10px;
+    background-color: #171717;
+}
