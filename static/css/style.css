@@ -84,7 +84,7 @@
 }
 
 .btn-rule {
-    margin: 5% 3%;
+    margin: 3%;
     padding: 2%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -135,7 +135,7 @@
     color: #fff;
     transition: .6s ease-in-out;
     -webkit-transition: .6s ease-in-out;   
-    overflow-y: auto;
+    overflow-y: auto; 
 }
 
 .menu_inner {
@@ -145,10 +145,10 @@
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);  
     overflow: hidden;
-    width: 80%;
     padding-top: 2%;
     text-align: center;    
     overflow-y: auto;
+    width: 35vh;
 }
 
 .menu_inner h2 {
