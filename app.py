@@ -71,6 +71,86 @@ def question():
     return render_template("question1.html", content=content, place=advice)
 
 
+@app.route("/question2")
+def question2():
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 2"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    return render_template("question2.html", content=content, place=advice)
+
+
+@app.route("/question3")
+def question3():
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 3"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    return render_template("question3.html", content=content, place=advice)
+
+
+@app.route("/question4")
+def question4():
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 4"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    return render_template("question4.html", content=content, place=advice)
+
+
+@app.route("/question5")
+def question5():
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 5"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    return render_template("question5.html", content=content, place=advice)
+
+
+@app.route("/question6")
+def question6():
+    conn = sqlite3.connect("flask.db")
+    c = conn.cursor()
+    contents = "SELECT content, advice FROM questions WHERE place_id = 6"
+    c.execute(contents)
+    contents = c.fetchall()
+    content = contents[0]
+    advice = contents[1]
+    content = random.choice(contents)
+    advice = random.choice(contents)
+    c.close()
+
+    return render_template("question6.html", content=content, place=advice)
+
+
 @app.route("/star", methods=["GET"])
 def achievement_get():
     return render_template("star.html")
@@ -78,15 +158,20 @@ def achievement_get():
 
 @app.route("/star", methods=["POST"])
 def achievement_post():
-    star = request.form.get("star")
+    star = request.form.getlist("star")
+    print(star)
+    print(type(star))
     comment = request.form.get("comment")
-    conn = sqlite3.connect('flasktest.db')
+    print(comment)
+    conn = sqlite3.connect('flask.db')
     c = conn.cursor()
-    c.execute("insert into star values(null,?,?)", (star, comment))
+    c.execute("insert into star values(null,?,?)", (star[0], comment))
+
     conn.commit()
-    conn.close()
-    return render_template("top.html")
-    # return redirect("/top")
+    c.close()
+    return redirect("/top")
+
+    # # return redirect("/top")
     # return "送信完了"
 
 
