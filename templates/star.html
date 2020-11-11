@@ -1,48 +1,34 @@
 {% extends 'index.html' %}
 {% block content %}
-
-<body class="star-body">
-
-
-    <!-- いったん消します -->
-    <!-- <div class="memo">
+<!-- いったん消します -->
+<!-- <div class="memo">
     <label for="comment">コメント</label>
     <textarea id="comment" name="comment" placeholder="ここには自由にコメントを記入してください"></textarea>
 </div> -->
 
-    <!-- 評価クラス -->
-    <header class="top-header">
-        <h1 class="top-title sp24pc48">今回の質問どうでしたか？</h1>
-    </header>
+<!-- 評価クラス -->
+<h1 class="title">今回の質問どうでしたか？</h1>
 
-    <div class="star">
-        <form action="/top" method="post">
-            <div class="evaluation">
-                <input id="star1" type="radio" name="star" value="5" />
-                <label for="star1"><span class="text" style="color: #171717;font-size: large;">最高</span>★</label>
-                <input id="star2" type="radio" name="star" value="4" />
-                <label for="star2"><span class="text" style="color: #171717;font-size: large;">良い</span>★</label>
-                <input id="star3" type="radio" name="star" value="3" />
-                <label for="star3"><span class="text" style="color: #171717;font-size: large;">普通</span>★</label>
-                <input id="star4" type="radio" name="star" value="2" />
-                <label for="star4"><span class="text" style="color: #171717;font-size: large;">悪い</span>★</label>
-                <input id="star5" type="radio" name="star" value="1" />
-                <label for="star5"><span class="text" style="color: #171717;font-size: large;">最悪</span>★</label>
-            </div>
-            <div class="memo">
-                <label for="comment">コメント</label>
-                <textarea id="comment" name="comment" placeholder="ここには自由にコメントを記入してください。"></textarea>
-                <input type="submit" name="save" value="送信">
-            </div>
-        </form>
-    </div>
-
-    <footer class="star-footer">
-        <a href="/top" class="starbtn-rule sp24pc48">TOPへ戻る</a>
-    </footer>
-
-
-</body>
-
+<div class="star">
+    <form action="/date" methods="post">
+        <div class="evaluation">
+            <input id="star1" type="radio" name="star" value="5" />
+            <label for="star1"><span class="text">最高</span>★</label>
+            <input id="star2" type="radio" name="star" value="4" />
+            <label for="star2"><span class="text">良い</span>★</label>
+            <input id="star3" type="radio" name="star" value="3" />
+            <label for="star3"><span class="text">普通</span>★</label>
+            <input id="star4" type="radio" name="star" value="2" />
+            <label for="star4"><span class="text">悪い</span>★</label>
+            <input id="star5" type="radio" name="star" value="1" />
+            <label for="star5"><span class="text">最悪</span>★</label>
+        </div>
+        <div class="memo">
+            <label for="comment">コメント</label>
+            <textarea id="comment" name="comment" placeholder="ここには自由にコメントを記入してください"></textarea>
+            <input type="submit" name="save" value="送信">
+        </div>
+    </form>
+</div>
 
 {% endblock %}

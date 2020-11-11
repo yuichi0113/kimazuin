@@ -71,86 +71,6 @@ def question():
     return render_template("question1.html", content=content, place=advice)
 
 
-@app.route("/question2")
-def question2():
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    contents = "SELECT content, advice FROM questions WHERE place_id = 2"
-    c.execute(contents)
-    contents = c.fetchall()
-    content = contents[0]
-    advice = contents[1]
-    content = random.choice(contents)
-    advice = random.choice(contents)
-    c.close()
-
-    return render_template("question2.html", content=content, place=advice)
-
-
-@app.route("/question3")
-def question3():
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    contents = "SELECT content, advice FROM questions WHERE place_id = 3"
-    c.execute(contents)
-    contents = c.fetchall()
-    content = contents[0]
-    advice = contents[1]
-    content = random.choice(contents)
-    advice = random.choice(contents)
-    c.close()
-
-    return render_template("question3.html", content=content, place=advice)
-
-
-@app.route("/question4")
-def question4():
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    contents = "SELECT content, advice FROM questions WHERE place_id = 4"
-    c.execute(contents)
-    contents = c.fetchall()
-    content = contents[0]
-    advice = contents[1]
-    content = random.choice(contents)
-    advice = random.choice(contents)
-    c.close()
-
-    return render_template("question4.html", content=content, place=advice)
-
-
-@app.route("/question5")
-def question5():
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    contents = "SELECT content, advice FROM questions WHERE place_id = 5"
-    c.execute(contents)
-    contents = c.fetchall()
-    content = contents[0]
-    advice = contents[1]
-    content = random.choice(contents)
-    advice = random.choice(contents)
-    c.close()
-
-    return render_template("question5.html", content=content, place=advice)
-
-
-@app.route("/question6")
-def question6():
-    conn = sqlite3.connect("flask.db")
-    c = conn.cursor()
-    contents = "SELECT content, advice FROM questions WHERE place_id = 6"
-    c.execute(contents)
-    contents = c.fetchall()
-    content = contents[0]
-    advice = contents[1]
-    content = random.choice(contents)
-    advice = random.choice(contents)
-    c.close()
-
-    return render_template("question6.html", content=content, place=advice)
-
-
 @app.route("/star", methods=["GET"])
 def achievement_get():
     return render_template("star.html")
@@ -158,35 +78,28 @@ def achievement_get():
 
 @app.route("/star", methods=["POST"])
 def achievement_post():
-    star = request.form.getlist("star")
-    print(star)
-    print(type(star))
+    star = request.form.get("star")
     comment = request.form.get("comment")
-    print(comment)
-    conn = sqlite3.connect('flask.db')
+    conn = sqlite3.connect('flasktest.db')
     c = conn.cursor()
-    c.execute("insert into star values(null,?,?)", (star[0], comment))
-
+    c.execute("insert into questions values(star,comment)", (star, comment))
     conn.commit()
+    conn.close()
+    return redirect("/")
+
+
+@app.route("/date")
+def date():
+    conn = sqlite3.connect('flasktest.db')
+    c = conn.cursor()
+    c.execute = "select content,advice,star,comment from questions where id = ?", (
+        id,)
+    date_list = []
+    for row in c.fetchall():
+        date_list.append(
+            {"content": row[0], "advice": row[1], "star": row[2], "comment": row[3]})
     c.close()
-    return redirect("/top")
-
-    # # return redirect("/top")
-    # return "送信完了"
-
-
-# @app.route("/date")
-# def date():
-#     conn = sqlite3.connect('flasktest.db')
-#     c = conn.cursor()
-#     c.execute = "select content,advice,star,comment from questions where id = ?", (
-#         id,)
-#     date_list = []
-#     for row in c.fetchall():
-#         date_list.append(
-#             {"content": row[0], "advice": row[1], "star": row[2], "comment": row[3]})
-#     c.close()
-#     return render_template('date.html', date_list=date_list)
+    return render_template('date.html', date_list=date_list)
 
 
 @app.errorhandler(404)
