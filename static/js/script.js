@@ -1,7 +1,7 @@
 $(function () {
-    $(".btn-rule span").on("click", function () {
+    $(".btn-rule").on("click", function () {
         if ($(this).text() == "キマズインとは！？") {
-            $(this).text("×");
+            $(this).text("キマズインとは！？");
             $("#menu").removeClass("suru");
         } else {
             $(this).text("キマズインとは！？");
@@ -9,3 +9,16 @@ $(function () {
         }
     });
 });
+
+$(function () {
+    $(".btn-rule-close").on("click", function () {
+        if ($(this).text() == "キマズインとは！？") {
+            $(this).text("CLOSE");
+            $("#menu").removeClass("suru");
+        } else {
+            $(this).text("CLOSE");
+            $("#menu").addClass("suru");
+        }
+    });
+});
+
