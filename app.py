@@ -44,13 +44,7 @@ def dbtest2():
 
     return render_template("dbtest2.html", content=content[0], advice=content[1])
 
-
 @app.route("/")
-def helloWorld():
-    return "HelloWorld."
-
-
-@app.route("/top")
 def template():
     return render_template("top.html")
 
@@ -169,7 +163,7 @@ def achievement_post():
 
     conn.commit()
     c.close()
-    return redirect("/top")
+    return redirect("/")
 
     # # return redirect("/top")
     # return "送信完了"
