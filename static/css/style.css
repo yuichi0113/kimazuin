@@ -84,7 +84,7 @@
 }
 
 .btn-rule {
-    margin: 5% 3%;
+    margin: 3%;
     padding: 2%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -95,32 +95,6 @@
     color: #fcd228;
     border-radius: 10px;
     background-color: #171717;
-}
-
-.btn-rule-close {
-    margin: 3%;
-    padding: 2%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 88%;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    color: #171717;
-    border-radius: 10px;
-    background-color: #fcd228;
-}
-
-.btn-rule span { 
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    cursor: pointer;
-}
-
-.btn-rule-close span {
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    cursor: pointer;
 }
 
 #menu {
@@ -134,8 +108,8 @@
     overflow: hidden;
     color: #fff;
     transition: .6s ease-in-out;
-    -webkit-transition: .6s ease-in-out;   
-    overflow-y: auto;
+    -webkit-transition: .6s ease-in-out;  
+    text-align: center; 
 }
 
 .menu_inner {
@@ -145,10 +119,9 @@
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);  
     overflow: hidden;
-    width: 80%;
-    padding-top: 2%;
-    text-align: center;    
-    overflow-y: auto;
+    overflow-y: auto; 
+    width: 80%; 
+    height: 100%;
 }
 
 .menu_inner h2 {
@@ -165,7 +138,19 @@
     -webkit-transform: translateY(-100%);
 }
 
-
+.btn-rule-close {
+    margin: 3%;
+    padding: 2%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 88%;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #171717;
+    border-radius: 10px;
+    background-color: #fcd228;
+}
 
 /* -----questionページのcss----- */
 /* -----questionページのcss----- */
@@ -182,7 +167,7 @@
 }
 
 .qu4-body {
-    background-color: #e73d3d;
+    background-color: #f14343;
 }
 
 .qu5-body {
@@ -190,7 +175,7 @@
 }
 
 .qu6-body {
-    background-color: #a368ca;
+    background-color: #b279d8;
 }
 
 .qu-header {
@@ -439,6 +424,26 @@ textarea {
     padding: 2%;
     width: 50%;
     height: 120px; 
+    border: solid 2px #171717;
+    border-radius: 10px;
+    font-size: large;
+}
+
+input {
+    margin: 0% 2%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    color: #fcd228;
+    background-color: #171717;
+    border-radius: 10px;
+    transition: .4s;
+    font-weight: bold;
+    width: 20%;
+    height: 120px;
+    align-self: center;
+    font-size: large;
 }
 
 .star-footer {
